@@ -1,6 +1,6 @@
 import os
 from collections import deque
-from funcion_turnos import turnos()
+import archivo
 
 
 my_deque = deque([])
@@ -13,7 +13,7 @@ while True:
         print('Por favor ingrese los datos del Paciente')
         nombre = input('Nombre y Apellido: ')
         dni = int(input('Dni: '))
-        turnos(nombre, dni)
+        archivo.turnos(nombre, dni)
     elif a == '2':
         break
     else:
