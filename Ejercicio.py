@@ -1,5 +1,7 @@
 import os
 from collections import deque
+from funcion_turnos import turnos()
+
 
 my_deque = deque([])
 os.system('cls')
@@ -11,11 +13,7 @@ while True:
         print('Por favor ingrese los datos del Paciente')
         nombre = input('Nombre y Apellido: ')
         dni = int(input('Dni: '))
-        my_deque.append({'Nombre':nombre, 'DNI':dni})
-        if len(my_deque) >= 3:
-            print(f'Llamar al paciente:{my_deque.popleft()}')
-            input('Presiona Enter para continuar')
-            os.system('cls')
+        turnos(nombre, dni)
     elif a == '2':
         break
     else:
